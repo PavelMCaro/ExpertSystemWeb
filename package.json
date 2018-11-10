@@ -1,0 +1,19 @@
+{
+  "name": "expertsystemweb",
+  "version": "1.0.0",
+  "description": "Sistema Experto Web para el Diagnóstico de Enfermedades Bucodentales",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelMCaro/ExpertSystemWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavelMCaro/ExpertSystemWeb/issues"
+  },
+  "homepage": "https://github.com/PavelMCaro/ExpertSystemWeb#readme"
+}
