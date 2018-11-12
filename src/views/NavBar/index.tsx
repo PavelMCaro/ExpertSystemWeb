@@ -5,10 +5,10 @@ export const NavBar = () => (
     <React.Fragment>
         <Menu pointing secondary>
           <Menu.Menu position='right'>
-            <Menu.Item href='//google.com'>
+            <Menu.Item href='/'>
                 Inicio
             </Menu.Item>
-            <Menu.Item href=''>
+            <Menu.Item href='/diagnosis'>
                 Diagnóstico
             </Menu.Item>
             <Menu.Item href=''>
