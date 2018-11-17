@@ -8,7 +8,7 @@ export const NavBar = () => (
             <Menu.Item href='/'>
                 Inicio
             </Menu.Item>
-            <Menu.Item href='/diagnosis'>
+            <Menu.Item href='/diagnostico'>
                 Diagnóstico
             </Menu.Item>
             <Menu.Item href=''>
