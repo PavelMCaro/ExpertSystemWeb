@@ -4,6 +4,7 @@
   "description": "Sistema Experto Web para el Diagnóstico de Enfermedades Bucodentales",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode=production",
     "start": "webpack-dev-server --mode=development"
   },
   "repository": {
