@@ -5,7 +5,7 @@ import { addSymptom, getBuccalOptions, getOralOptions } from '../state/symptoms
 
 const options = []
 
-export const Symptom = ({ buccalOptions, dentalOptions, handleAddSymptom }) => (
+const Symptom = ({ buccalOptions, dentalOptions, handleAddSymptom }) => (
     <Grid centered columns={1}>
         <Grid.Column>
             <Header as='h3' textAlign='center'>Síntomas</Header>
