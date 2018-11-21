@@ -12,8 +12,8 @@ export const NavBar = () => (
             <Menu.Item>
                 <Link to='/diagnostico'>Diagnóstico</Link>
             </Menu.Item>
-            <Menu.Item href='/informacion'>
-                Información
+            <Menu.Item>
+            <Link to='/informacion'>Información</Link>
             </Menu.Item>
           </Menu.Menu>
         </Menu>

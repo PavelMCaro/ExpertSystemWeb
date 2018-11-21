@@ -3,6 +3,7 @@ import { Header, Grid, Label, Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { deleteSymptom, getSymptomsSelected } from '../../symptom/state/symptoms';
 
+
 const Summary = ({ options, handleDeleteSymptom }) => (
     <React.Fragment>
         <Header as='h3' textAlign='center'>Resumen</Header>
