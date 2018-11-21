@@ -33,6 +33,11 @@ export const Routes = [
         exact: true,
       },
       {
+        path: `${pathBase}/informacion/:alias`,
+        component: Information,
+        exact: true,
+      },
+      {
         path: '*',
         component: NotFound
       }

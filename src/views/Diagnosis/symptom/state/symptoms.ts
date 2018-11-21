@@ -3,6 +3,7 @@ import { stat } from "fs";
 // actionTypes
 const ADD_SYMPTOM = 'ADD_SYMPTOM';
 const DELETE_SYMPTOM = 'DELETE_SYMPTOM';
+const CLEAR_SYMPTOMS = 'CELAR_SYMPTOMS';
 
 // action
 export const addSymptom = value => ({
@@ -14,6 +15,10 @@ export const deleteSymptom = value => ({
     type: DELETE_SYMPTOM,
     value
 });
+
+export const clearSymptom = () => ({
+    type: CLEAR_SYMPTOMS
+})
 
 // reducer
 const initialState = [
@@ -137,6 +142,8 @@ export const symptoms = (state = initialState, action) => {
             return toogleSymptopm(state, action);
         case DELETE_SYMPTOM:
             return toogleSymptopm(state, action);
+        case CLEAR_SYMPTOMS:
+            return initialState
         default:
             return state;
     }

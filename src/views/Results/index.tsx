@@ -1,20 +1,55 @@
 import * as React from 'react';
 import { Header, Segment, Grid, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-import { getOralOptions, getSymptomsSelected } from '../Diagnosis/symptom/state/symptoms';
+import { getOralOptions, getSymptomsSelected, getBuccalOptions } from '../Diagnosis/symptom/state/symptoms';
+import  { CariesDentalSymptoms, BruxismoSymptoms, GingivitisSymptoms, PeriodontitisSymptoms, FluorosisSymptoms } from '../../data'
 
 interface Props {
-    result: any;
     symptomsSelected: any;
     sypmtomsList: any;
+    BucalsypmtomsList: any;
+    history: any;
 }
 
-class Results extends React.Component<Props,{}> {
+interface State {
+    disease: string;
+    probability: string;
+    alias: string;
+}
+class Results extends React.Component<Props, State> {
 
-    render (): JSX.Element {
-
+    state = {
+        disease: '',
+        probability: '',
+        alias: ''
+    }
+    
+    componentDidMount() {
         console.log('SINTOMAS', this.props.symptomsSelected);
-        console.log('ARRAY SINTOMAS', this.props.sypmtomsList);
+        console.log('longiutd', this.props.symptomsSelected.length);
+
+        let cariesCount = 0;
+
+        for(let i=0; i<this.props.symptomsSelected.length; i++){
+            for(let j=0; j<CariesDentalSymptoms.length; j++){
+                if(this.props.symptomsSelected[i].value == CariesDentalSymptoms[j].value){
+                    cariesCount += 1;
+                }
+            }
+        }
+
+        if (cariesCount >= 3){
+            this.setState({
+                disease: 'Caries Dental',
+                probability: 'altas probabilidades',
+                alias: 'CDTL'
+            })
+        }
+
+        console.log('CONTADOR', cariesCount);
+
+    }
+    render (): JSX.Element {
 
         return (
             <React.Fragment>
@@ -26,13 +61,13 @@ class Results extends React.Component<Props,{}> {
                                 <Grid.Row>
                                     <Grid.Column>
                                         <Segment>
-                                            El paciente tiene altas probabilidades de padecer {this.props.result}
+                                            El paciente tiene {this.state.probability} de padecer <strong>{this.state.disease}</strong>
                                         </Segment>
                                     </Grid.Column>
                                 </Grid.Row>
                                 <Grid.Row>
                                     <Grid.Column>
-                                        <Button primary fluid href='/'>Acerca de la enfermedad</Button>
+                                        <Button primary fluid onClick={() => this.props.history.push(`/information/${this.state.alias}`)}>Acerca de la enfermedad</Button>
                                     </Grid.Column>
                                 </Grid.Row>
                                 <Grid.Row>
@@ -52,7 +87,8 @@ class Results extends React.Component<Props,{}> {
 
 const mapSate = state => ({
     symptomsSelected: getSymptomsSelected(state),
-    sypmtomsList: getOralOptions(state)
+    sypmtomsList: getOralOptions(state),
+    BucalsypmtomsList: getBuccalOptions(state)
 });
 
 const mapDispatch = dispatch => ({

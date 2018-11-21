@@ -1,4 +1,4 @@
-const CariesDentalSymptoms = [
+export const CariesDentalSymptoms = [
     {
         text: 'Dolor dental',
         value: 'DD',
@@ -17,7 +17,7 @@ const CariesDentalSymptoms = [
     }
 ]
 
-const GingivitisSymptoms = [
+export const GingivitisSymptoms = [
     {
         text: 'Sangrado de encías',
         value: 'SE',
@@ -36,7 +36,7 @@ const GingivitisSymptoms = [
     }
 ]
 
-const BruxismoSymptoms = [
+export const BruxismoSymptoms = [
     {
         text: 'Dientes desalineados',
         value: 'DDL',
@@ -55,7 +55,7 @@ const BruxismoSymptoms = [
     }
 ]
 
-const PeriodontitisSymptoms = [
+export const PeriodontitisSymptoms = [
     {
         text: 'Mal aliento',
         value: 'MA',
@@ -82,7 +82,7 @@ const PeriodontitisSymptoms = [
     }
 ]
 
-const FluorosisSymptoms = [
+export const FluorosisSymptoms = [
     {
         text: 'Áreas blancas y opacas en la superficie del esmalte dental',
         value: 'ABO',

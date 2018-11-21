@@ -13,7 +13,7 @@ export const NavBar = () => (
                 <Link to='/diagnostico'>Diagnóstico</Link>
             </Menu.Item>
             <Menu.Item>
-            <Link to='/informacion'>Información</Link>
+                <Link to='/informacion'>Información</Link>
             </Menu.Item>
           </Menu.Menu>
         </Menu>
