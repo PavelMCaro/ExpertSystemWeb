@@ -29,11 +29,35 @@ class Results extends React.Component<Props, State> {
         console.log('longiutd', this.props.symptomsSelected.length);
 
         let cariesCount = 0;
+        let gingivitisCount = 0;
+        let periodontitisCount = 0;
+        let bruxismoCount = 0;
+        let fluorosisCount = 0;
 
         for(let i=0; i<this.props.symptomsSelected.length; i++){
             for(let j=0; j<CariesDentalSymptoms.length; j++){
                 if(this.props.symptomsSelected[i].value == CariesDentalSymptoms[j].value){
                     cariesCount += 1;
+                }
+            }
+            for(let j=0; j<GingivitisSymptoms.length; j++){
+                if(this.props.symptomsSelected[i].value == GingivitisSymptoms[j].value){
+                    gingivitisCount += 1;
+                }
+            }
+            for(let j=0; j<PeriodontitisSymptoms.length; j++){
+                if(this.props.symptomsSelected[i].value == PeriodontitisSymptoms[j].value){
+                    periodontitisCount += 1;
+                }
+            }
+            for(let j=0; j<BruxismoSymptoms.length; j++){
+                if(this.props.symptomsSelected[i].value == BruxismoSymptoms[j].value){
+                    bruxismoCount += 1;
+                }
+            }
+            for(let j=0; j<FluorosisSymptoms.length; j++){
+                if(this.props.symptomsSelected[i].value == FluorosisSymptoms[j].value){
+                    fluorosisCount += 1;
                 }
             }
         }
@@ -46,7 +70,11 @@ class Results extends React.Component<Props, State> {
             })
         }
 
-        console.log('CONTADOR', cariesCount);
+        console.log('CONTADOR CARIES', cariesCount);
+        console.log('CONTADOR GINGIVITIS', gingivitisCount);
+        console.log('CONTADOR PERIODONTITIS', periodontitisCount);
+        console.log('CONTADOR BRUXISMO', bruxismoCount);
+        console.log('CONTADOR FLUOROSIS', fluorosisCount);
 
     }
     render (): JSX.Element {
