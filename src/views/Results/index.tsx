@@ -149,7 +149,7 @@ class Results extends React.Component<Props, State> {
                             this.setState({
                                 disease: diseaseCounts[4].text,
                                 text: 'El paciente tiene altas probabilidades de padecer ',
-                                alias: diseaseCounts[0].value
+                                alias: diseaseCounts[4].value
                             })
                 }
             } else if (diseaseCounts[4].count == 3) {
@@ -186,7 +186,7 @@ class Results extends React.Component<Props, State> {
                     this.setState({
                         disease: diseaseCounts[4].text,
                         text: 'El paciente tiene probabilidades de padecer ',
-                        alias: diseaseCounts[0].value
+                        alias: diseaseCounts[4].value
                     }) 
                 }
             } else if (diseaseCounts[4].count == 2) {
@@ -208,7 +208,7 @@ class Results extends React.Component<Props, State> {
                     this.setState({
                         disease: diseaseCounts[4].text,
                         text: 'El paciente tiene baja probabilidad de padecer ',
-                        alias: diseaseCounts[0].value
+                        alias: diseaseCounts[4].value
                     }) 
                 }
             } else if (diseaseCounts[4].count == 1) {
@@ -555,7 +555,7 @@ class Results extends React.Component<Props, State> {
                         text: 'El paciente tiene probabilidades de padecer',
                         alias: diseaseCounts[4].value
                     }) 
-                } else  if(diseaseCounts[3].count == 1) {
+                } else  if(diseaseCounts[3].count == 1 || diseaseCounts[3].count == 0) {
                     this.setState({
                         disease: diseaseCounts[4].text,
                         text: 'El paciente tiene probabilidades de padecer',
@@ -598,11 +598,33 @@ class Results extends React.Component<Props, State> {
                                     <Grid.Row>
                                         <Grid.Column>
                                             <Button primary fluid onClick={() => this.props.history.push(`/tratamiento/${this.state.alias}`)}>Tratamiento</Button>
-                                            <br/><br/><br/>
+                                        </Grid.Column>
+                                    </Grid.Row>
+                                    <Grid.Row>
+                                        <Grid.Column>
+                                            <Button primary fluid onClick={() => this.props.history.push('/diagnostico')}>Volver al Diagnóstico</Button>
+                                        </Grid.Column>
+                                    </Grid.Row>
+                                    <Grid.Row>
+                                        <Grid.Column>
+                                            <Button primary fluid onClick={() => this.props.history.push('/')}>Salir</Button>
+                                        </Grid.Column>
+                                    </Grid.Row>
+                                    <br/><br/><br/>
+                                </React.Fragment>
+                                 : 
+                                 <React.Fragment>
+                                    <Grid.Row>
+                                        <Grid.Column>
+                                            <Button primary fluid onClick={() => this.props.history.push('/diagnostico')}>Volver al Diagnóstico</Button>
+                                        </Grid.Column>
+                                    </Grid.Row>
+                                    <Grid.Row>
+                                        <Grid.Column>
+                                            <Button primary fluid onClick={() => this.props.history.push('/')}>Salir</Button>
                                         </Grid.Column>
                                     </Grid.Row>
                                 </React.Fragment>
-                                 : null
                                 }
                                 <br/>
                                 <br/>
