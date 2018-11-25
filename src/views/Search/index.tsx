@@ -63,13 +63,11 @@ export const Search = (props) => (
                             />
                             </Grid.Column>
                         </Grid.Row>
-                        <Grid.Row>
-                            <Grid.Column>
-                                <Button primary fluid href='/'>Tratamiento</Button>
-                                <br/><br/>
-                            </Grid.Column>
-                        </Grid.Row>
                     </Grid>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                 </Segment>
             </Grid.Column>
         </Grid>

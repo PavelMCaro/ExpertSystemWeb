@@ -73,6 +73,12 @@ const initialState = [
         type: 'oral',
         selected: false
     },{
+        text: 'Retracción de encías',
+        value: 'RE',
+        key: 'RE',
+        type: 'oral',
+        selected: false
+    },{
         text: 'Dientes desalineados',
         value: 'DDL',
         key: 'DDL',

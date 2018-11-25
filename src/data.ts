@@ -19,6 +19,10 @@ export const CariesDentalSymptoms = [
 
 export const GingivitisSymptoms = [
     {
+        text: 'Mal aliento',
+        value: 'MA',
+    },
+    {
         text: 'Sangrado de encías',
         value: 'SE',
     },
@@ -33,26 +37,7 @@ export const GingivitisSymptoms = [
     {
         text: 'Encías inflamadas',
         value: 'EI',
-    }
-]
-
-export const BruxismoSymptoms = [
-    {
-        text: 'Dientes desalineados',
-        value: 'DDL',
     },
-    {
-        text: 'Dolor de mandíbula',
-        value: 'DM',
-    },
-    {
-        text: 'Desgaste dental',
-        value: 'DDT',
-    },
-    {
-        text: 'Chasquidos dentales',
-        value: 'CHD',
-    }
 ]
 
 export const PeriodontitisSymptoms = [
@@ -77,8 +62,31 @@ export const PeriodontitisSymptoms = [
         value: 'EI',
     },
     {
-        text: 'Encías que sangran con facilidad',
-        value: 'ESF'
+        text: 'Sangrado de encías',
+        value: 'SE',
+    },
+    {
+        text: 'Retracción de encías',
+        value: 'RE',
+    }
+]
+
+export const BruxismoSymptoms = [
+    {
+        text: 'Dientes desalineados',
+        value: 'DDL',
+    },
+    {
+        text: 'Dolor de mandíbula',
+        value: 'DM',
+    },
+    {
+        text: 'Desgaste dental',
+        value: 'DDT',
+    },
+    {
+        text: 'Chasquidos dentales',
+        value: 'CHD',
     }
 ]
 
@@ -89,5 +97,9 @@ export const FluorosisSymptoms = [
     },{
         text: 'Pequeñas grietas y estrías en la superficie de los dientes',
         value: 'PGE',
+    },
+    {
+        text: 'Manchas de color oscuro en los dientes',
+        value: 'MD',
     }
 ]

@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import { Header, Segment, Grid, Dropdown, Label } from 'semantic-ui-react';
 import { addSymptom, getBuccalOptions, getOralOptions, clearSymptom } from '../state/symptoms';
 
-const options = []
-
 interface Props {
     buccalOptions: any;
     dentalOptions: any;
@@ -57,16 +55,7 @@ class Symptom extends React.Component<Props>{
                             }} 
                         />
                         <br/>
-                        <Label as='a' color='blue' ribbon>
-                            Antecedentes
-                        </Label>
-                        <Dropdown placeholder='Seleccione síntoma' fluid search selection options={options}/>
-                        <br/>
-                        <Label as='a' color='blue' ribbon>
-                            Otros
-                        </Label>
-                        <Dropdown placeholder='Seleccione síntoma' fluid search selection options={options}/>
-                    </Segment>
+                     </Segment>
                 </Grid.Column>
             </Grid>
         )
